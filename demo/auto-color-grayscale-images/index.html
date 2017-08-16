@@ -10,36 +10,8 @@
     }
 </style>
 <script src="./colorization.codeandsee.com_files/jquery.min.js.download"></script>
-<script>
-    function uploadToServer() {
-        var files = $('#files')[0].files; //where files would be the id of your multi file input
-        //or use document.getElementById('files').files;
 
-        for (var i = 0, f; f = files[i]; i++) {
-            console.log(f);
-            var formData = new FormData(f);
-            formData.append('file', f);
-
-            $.ajax({
-                url: "/api/colorization",
-                type: "POST",
-                data: formData,
-                processData: false,
-                contentType: false
-            }).done(function(data){
-                console.log(data);
-                $("#result").append("<div class='image-row'><img src='" + data.thumb + "'><img src='" + data.output + "'></div>");
-            });
-        }
-
-        return false;
-    }
-</script>
-
-</head><body cz-shortcut-listen="true"><form method="post" enctype="multipart/form-data" action="http://colorization.codeandsee.com/api/colorization" onsubmit="return uploadToServer()">
-    Select images: <input type="file" name="files[]" id="files" multiple="">
-    <input type="submit" value="Submit">
-</form>
+</head><body cz-shortcut-listen="true">
 <div id="result">
 
 <div class="image-row"><img src="./colorization.codeandsee.com_files/1502909213506.jpg"><img src="./colorization.codeandsee.com_files/1502909213506(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909213412.jpg"><img src="./colorization.codeandsee.com_files/1502909213412(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909213535.jpg"><img src="./colorization.codeandsee.com_files/1502909213535(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909213539.jpg"><img src="./colorization.codeandsee.com_files/1502909213539(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909213531.jpg"><img src="./colorization.codeandsee.com_files/1502909213531(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909294028.jpg"><img src="./colorization.codeandsee.com_files/1502909294028(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909293993.jpg"><img src="./colorization.codeandsee.com_files/1502909293993(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909293874.jpg"><img src="./colorization.codeandsee.com_files/1502909293874(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909294034.jpg"><img src="./colorization.codeandsee.com_files/1502909294034(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909293954.jpg"><img src="./colorization.codeandsee.com_files/1502909293954(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909387856.jpg"><img src="./colorization.codeandsee.com_files/1502909387856(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909387855.jpg"><img src="./colorization.codeandsee.com_files/1502909387855(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909387905.jpg"><img src="./colorization.codeandsee.com_files/1502909387905(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909387839.jpg"><img src="./colorization.codeandsee.com_files/1502909387839(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909387923.jpg"><img src="./colorization.codeandsee.com_files/1502909387923(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909528602.jpg"><img src="./colorization.codeandsee.com_files/1502909528602(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909528598.jpg"><img src="./colorization.codeandsee.com_files/1502909528598(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909528607.jpg"><img src="./colorization.codeandsee.com_files/1502909528607(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909528603.jpg"><img src="./colorization.codeandsee.com_files/1502909528603(1).jpg"></div><div class="image-row"><img src="./colorization.codeandsee.com_files/1502909528611.jpg"><img src="./colorization.codeandsee.com_files/1502909528611(1).jpg"></div></div></body></html>
